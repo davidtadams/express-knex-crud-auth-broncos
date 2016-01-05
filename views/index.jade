@@ -1,5 +1,9 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1 Welcome to the Broncos Players List
+  a(href='/players') View players
+  p In order to add a player, you must be signed in
+  a(href='/auth/login') Login
+  p If you haven't signed up yet, please do so before loggin in
+  a(href='/auth/signup') Signup

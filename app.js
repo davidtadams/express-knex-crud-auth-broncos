@@ -25,9 +25,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.locals.moment = require('moment');
 
+app.use('/', routes);
+app.use('/users', users);
 app.use('/players', players);
-// app.use('/', routes);
-// app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
