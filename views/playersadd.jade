@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  a(href="/") Home
+  h1 Hello User
+  h2 Add a Broncos player to the list
+  form(action="players/add", method="POST")
+    div
+      label(for="first_name") First Name:
+      input(type="text",placeholder="First Name",name="first_name")
+    div
+      label(for="last_name") Last Name:
+      input(type="text",placeholder="Last Name",name="last_name")
+    div
+      label(for="position") Position:
+      input(type="text",placeholder="Position",name="position")
+    div
+      label(for="number") Number:
+      input(type="text",placeholder="Number",name="number")
+    div
+      label(for="date_started") Date Started:
+      input(type="date",placeholder="Date Started",name="date_started")
+    button(type="submit") Add Player

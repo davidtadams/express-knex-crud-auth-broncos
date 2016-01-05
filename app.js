@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var players = require('./routes/players');
+var auth = require('./routes/auth');
 
 var app = express();
 
@@ -28,6 +29,7 @@ app.locals.moment = require('moment');
 app.use('/', routes);
 app.use('/users', users);
 app.use('/players', players);
+app.use('/auth', auth);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

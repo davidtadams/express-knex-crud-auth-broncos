@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  a(href="/") Home
+  h1 Please Signup
+  form(action="auth/signup", method="POST")
+    div
+      label(for="email") Email:
+      input(type="email",placeholder="Enter email",name="email")
+    div
+      label(for="password") Password:
+      input(type="password",placeholder="Enter password",name="password")
+    button(type="submit") Signup
